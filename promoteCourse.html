@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>第三方活动发布管理管理</title>
+	<link rel="stylesheet" rev="stylesheet" type="text/css"
+      href="css/extreme/extremecomponents.css"/>
+	<link rel="stylesheet" rev="stylesheet" type="text/css"
+      href="css/extreme/extremesite.css"/>
+	<link rel="stylesheet" rev="stylesheet" type="text/css"
+      href="css/viewdetail.css"/>
+    <link rel="stylesheet" rev="stylesheet" type="text/css"
+      href="css/default.css" media="all"/>
+    <link rel="stylesheet" rev="stylesheet" type="text/css"
+          href="css/main.css" media="all"/>
+           <meta charset="utf-8">
+<style>
+	.odd{
+		   border-top: 1px solid #b7dad6;
+		    border-bottom: 1px solid #c1e1dd;
+		    color: #00554a;
+		    font-family: verdana, arial, helvetica, sans-serif;
+		    font-size: 9pt;
+		    font-weight: bold;
+		    text-align: left;
+		    padding: 6px;
+		    margin: 0px;
+	
+}
+</style>
+</head>
+
+<body>
+<form name="icform" method="post">
+    <table class="modelTable" cellspacing="1">
+        <tr>
+            <td colspan="2" class="modelTitle">第三方活动发布管理</td>
+        </tr>
+    </table>
+
+    <div class="textbox-header">
+        <div class="textbox-inner-header">
+
+            <div class="textbox-title">
+                                 活动编号:<input type="text" name="likes" id="likes" value="${likes}">
+                                 课程主题:<input type="text" name="likes" id="likes" value="${likes}">
+                                 活动类型:<input type="text" name="likes" id="likes" value="${likes}">
+                                 活动状态:<input type="text" name="likes" id="likes" value="${likes}">
+                <button href="#" onclick="formSubmit('list.action','_self');">查询</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="textbox" id="centerTextbox">
+        <div class="textbox-header">
+            <div class="textbox-inner-header">
+                <div class="textbox-title">课程列表</div>
+            </div>
+        </div>
+
+        <div>
+
+            <div class="eXtremeTable">
+                <table id="ec_table" class="tableRegion" width="98%">
+                    <thead>
+                    <tr>
+                        <td class="tableHeader"><input type="checkbox" name="selid"
+                        ></td>
+                        <td class="tableHeader">序号</td>
+                        <td class="tableHeader">活动类型</td>
+                        <td class="tableHeader">活动主题</td>
+                        <td class="tableHeader">活动时间</td>
+                        <td class="tableHeader">活动地点</td>
+                        <td class="tableHeader">审核状态</td>
+                        <td class="tableHeader">可选择的操作</td>
+                    </tr>
+                    </thead>
+                    <tbody class="tableBody">
+
+                        <tr class="odd">
+	                        <td><input type="checkbox"/></td>
+	                        <td>1</td>
+	                        <td>大类</td>
+	                        <td>聚会</td>
+	                        <td>周六上午9:00-11:00</td>
+	                        <td>杨浦区</td>
+	                        <td>已审核</td>
+	                        <td>
+	                        	<a href="checkPromoteCourse.html" target="_Blank">查看详细信息</a>
+	                        	<a href="#">审核未通过</a>
+	                        	<a href="#">确认发布</a>
+	                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
+</form>
+</body>
+</html>

@@ -1,0 +1,107 @@
+/*轮播样式*/
+.pic-tab {
+    width: 100%;
+    height: 7rem;
+    position: relative;
+}
+
+.pic-tab li {
+    float: left;
+    position: relative;
+}
+
+.pic-tab img {
+    width: 100%;
+    height: 7rem;
+}
+
+.pic-tab span {
+    position: absolute;
+    left: 1rem;
+    bottom: 0.5rem;
+    font: 0.7rem/2 "微软雅黑";
+    color: #fff;
+}
+
+.imgList {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+}
+
+.imgList li {
+    float: left;
+    margin-left: 0.2rem;
+    width: 0.22rem;
+    height: 0.22rem;
+    border-radius: 50%;
+    background-color: #6a666f;
+}
+
+/*nav列表*/
+.nav ul {
+    background-color: #F2F2F2;
+}
+
+.nav li {
+    float: left;
+/ / width: 50 %;
+    font: 0.6rem/2.5 "微软雅黑";
+    text-align: center;
+}
+
+.nav .active {
+    color: black;
+    background-color: #cce8b2;
+}
+
+.page ul {
+    padding-left: 0.5rem;
+}
+
+.page ul li {
+    border-bottom: 1px solid #ccc;
+    padding: 0.5rem;
+    padding-left: 0;
+}
+
+.page img {
+    float: left;
+    width: 3.5rem;
+    height: 2.5rem;
+    margin-right: 0.7rem;
+}
+
+.page .right {
+    float: left;
+    width: 10rem;
+    height: 2.5rem;
+}
+
+.right h2 {
+    font: 0.65rem/2 "微软雅黑";
+}
+
+.right p {
+    font: 0.55rem/1 "微软雅黑";
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.hide {
+    display: none;
+}
+
+select {
+    width: 45%;
+    font: 0.5rem/2.5 "微软雅黑";
+    display: inline-block;
+    padding: 0.2rem 0.7rem;
+    border: 1px solid #999;
+    margin: 0.1rem 0.1rem 0.1rem 0.1rem;
+
+}

@@ -1,0 +1,109 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>模块介绍</title>
+    <link rel="stylesheet" rev="stylesheet" type="text/css" href="css/main.css" media="all"/>
+    <script src="jquery.2.0.0.js"></script>
+    <script src="linkageMenu.js"></script>
+    <script type="javascript">$(function () {
+        $.linkageMenu({
+            'selectOneId': 'selectOne',//一级菜单Id
+            'selectTwoId': 'selectTwo',//二级菜单Id
+            'selectOneVal': '{"key1":"value1", "key2":"value2"}',//一级菜单option值
+            'paramName': 'selectOneValue',//请求url的参数key
+            'getSelectTwoValUrl': 'http://localhost:3000/users'//通过一级菜单的value获取二级菜单的值的url
+        });
+    });
+    </script>
+</head>
+<body>
+<div class="textbox"></div>
+<div class="modelDiv">
+    <table class="modelTable" cellspacing="1">
+        <tr>
+            <td colspan="2" class="modelTitle">
+                青果活动发布
+            </td>
+        </tr>
+        <tr>
+            <td class="subModelTitle">
+                活动名称&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="activity-name" placeholder="请输入活动名称">
+            </td>
+            <td class="subModelTitle">
+                活动类型<!--二级联动技术难点-->
+                &nbsp&nbsp&nbsp&nbsp&nbsp
+                <select name="first-class" id="selectOne">
+                    <option value="请选择活动大类">请选择活动大类</option>
+                    <option value="活动大类">活动大类</option>
+                </select>
+                <select name="second-class" id="selectTwo">
+                    <option value="请选择活动小类">请选择活动小类</option>
+                    <option value="活动小类">活动小类</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="subModelTitle">
+                活动地点&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="activity-name" placeholder="请输入活动地点">
+            </td>
+            <td class="subModelTitle">
+                活动时间&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="date" name="activity-date">
+            </td>
+        </tr>
+        <tr>
+            <td class="subModelTitle">
+                活动所属单位<input type="text" name="activity-name" placeholder="请输入活动所属单位">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="subModelTitle">
+                活动需求
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="subModelTitle">
+                <input type="checkbox" name="角色">导师&nbsp&nbsp&nbsp&nbsp
+                <input type="text" name="人数" placeholder="请输入需要人数">
+                <select>
+                    <option>请选择导师领域</option>
+                </select>
+                <input type="text" name="押金" placeholder="请输入导师押金">
+                <input type="text" name="酬金" placeholder="请输入导师酬金"><br>
+                <input type="checkbox" name="角色">匠人&nbsp&nbsp&nbsp&nbsp
+                <input type="text" name="人数" placeholder="请输入需要人数">
+                <select>
+                    <option>请选择匠人领域</option>
+                </select>
+                <input type="text" name="押金" placeholder="请输入匠人押金">
+                <input type="text" name="酬金" placeholder="请输入匠人酬金"><br>
+                <input type="checkbox" name="角色">志愿者
+                <input type="text" name="人数" placeholder="请输入需要人数">
+                <input type="text" name="押金" placeholder="请输入导师押金">
+                <input type="text" name="酬金" placeholder="请输入导师酬金"><br>
+                <input type="checkbox" name="角色">观众&nbsp&nbsp&nbsp&nbsp
+                <input type="text" name="人数" placeholder="请输入需要人数"><br>
+                <input type="checkbox" name="角色">场地&nbsp&nbsp&nbsp&nbsp
+                <select>
+                    <option>请选择导师领域</option>
+                    <option>青果提供</option>
+                    <option>第三方提供</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="subModelTitle">
+                交通&nbsp&nbsp<input type="text" name="交通" placeholder="请输入附近交通">
+                活动图片&nbsp&nbsp<input type="file">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="subModelTitle">
+                活动描述<textarea style="height: 200px;width: 400px; resize: none"></textarea>
+            </td>
+        </tr>
+    </table>
+    <input type="button" value="发布">
+</div>
+</body>
+
+</html>

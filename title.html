@@ -1,0 +1,67 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- 调用样式表 -->
+    <link rel="stylesheet" rev="stylesheet" type="text/css" href="css/default.css" media="all"/>
+    <link rel="stylesheet" rev="stylesheet" type="text/css" href="css/title.css" media="all"/>
+
+</head>
+
+<body onSelectStart="return true"><!-- 文档主题部分开始 -->
+
+<div class="PositionFrame_black" id="PositionFrame"></div>
+<div id="userInfo" style="z-index:999;" onclick="HideLoginDiv()" title="点击关闭">
+    <img src="images/title/avataronline.gif" border="0" style="margin-top:-1px;"/>
+    您好：<strong>${sessionScope.sysUserVO.name}</strong>&nbsp;&nbsp;|
+    您所属单位：<strong>${sessionScope.sysUserVO.areaName}</strong>&nbsp;&nbsp;
+    <img src="images/title/close.gif" border="0"/>
+</div>
+
+<a id="memos" style="cursor:pointer;" href="${ctx}/fmain.action" target="_top" title="点击切换到系统首页">
+    <div id="memo" class="memo" title="点击切换到系统首页"></div>
+</a>
+<a id="logins" style="cursor:pointer;" onclick="doLoginDiv();" title="点击显示您的登录信息">
+    <div id="small_login" class="small_login" title="点击显示您的登录信息"></div>
+</a>
+<a id="logout" style="cursor:pointer;" onclick="logout();" target="_top" title="点击退出系统">
+    <div id="small_login_out" class="small_login_out" title="点击退出系统"></div>
+</a>
+
+<div class="headerBg">
+    <div class="top_logo">
+        <div class="navMenu" style="float:left;text-align:left;">
+            <div class="titleDate" style="float:left;">
+                <fmt:formatDate value="${now}" pattern="yyyy年M月d日 E"/>
+            </div>
+            <div style="height:29px;">
+                <span id="leftKey" onmouseover="periodOffset(this, 'left')"><img
+                        src="images/title/left_arrow.png"/></span>
+                <div class="mavMeau_top"></div>
+
+
+                <div id="mask">
+                    <div id="menuContent">
+                        <span id="topmenu"
+                              onclick="top.location.href='fmain.action';linkHighlightMenu(this);">系统首页</span>
+                        <span id="tm_separator1"></span><span id="topmenu" onclick="top.leftFrame.location.href='cargoLeft.action';top.main.location.href='cargoMain.action';linkHighlightMenu(this);">财务管理</span>
+                        <span id="tm_separator2"></span><span id="topmenu" onclick="top.leftFrame.location.href='statLeft.action';top.main.location.href='statMain.action';linkHighlightMenu(this);">统计分析</span>
+                        <span id="tm_separator3"></span><span id="topmenu" onclick="top.leftFrame.location.href='baseinfoLeft.action';top.main.location.href='baseinfoMain.action';linkHighlightMenu(this);">课程管理</span>
+                        <span id="tm_separator3"></span><span id="topmenu" onclick="top.leftFrame.location.href='baseinfoLeft.action';top.main.location.href='baseinfoMain.action';linkHighlightMenu(this);">活动管理</span>
+                        <span id="tm_separator3"></span><span id="topmenu" onclick="top.leftFrame.location.href='baseinfoLeft.action';top.main.location.href='baseinfoMain.action';linkHighlightMenu(this);">积分管理</span>
+                        <span id="tm_separator4"></span><span id="topmenu" onclick="top.leftFrame.location.href='sysadminLeft.action';top.main.location.href='sysadminMain.action';linkHighlightMenu(this);">系统管理</span>
+                    </div>
+                </div>
+
+
+                <span id="rightKey" onmouseover="periodOffset(this, 'right')"><img
+                        src="images/title/right_arrow.png"/></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form name="form1" style="display: none;"></form>
+<%//备忘录等使用%>
+</body>
+</html>

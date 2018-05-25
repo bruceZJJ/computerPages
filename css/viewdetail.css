@@ -1,0 +1,25 @@
+html {
+    line-height: 1.6;
+}
+
+body {
+    font-family: -apple-system-font, "Helvetica Neue", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: inherit;
+}
+
+.commonTable {
+    font-size: xx-large;
+    color: #607fa6;
+    text-decoration: none;
+}
+
+.columnTitle {
+    color: black;
+    text-decoration: none;
+}
+
+.tableContent {
+    color: blue;
+    text-decoration: none;
+}
